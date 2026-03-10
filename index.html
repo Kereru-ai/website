@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kereru.ai | Sovereign & Responsible AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            colors: {
+              kereru: {
+                dark: '#020617',     // Slate 950
+                panel: '#0F172A',    // Slate 900
+                green: '#166534',    // Green 700
+                neon: '#22c55e',     // Green 500 (Accent)
+                blue: '#1e40af',     // Blue 800
+                teal: '#115e59',     // Teal 800
+                light: '#f8fafc',    // Slate 50
+              }
+            },
+            backgroundImage: {
+              'hero-pattern': "url('https://images.unsplash.com/photo-1507699622177-388898d99032?q=80&w=2560&auto=format&fit=crop')",
+              'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #020617;
+        color: #f8fafc;
+      }
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #4ade80 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .mesh-gradient {
+        background: radial-gradient(circle at 50% 50%, rgba(22, 101, 52, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 100% 0%, rgba(30, 64, 175, 0.15) 0%, transparent 50%);
+      }
+      
+      /* 8020-inspired button effect */
+      .btn-8020 {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: 1;
+      }
+      .btn-8020:hover {
+        transform: scale(1.05);
+        box-shadow: 0 20px 40px -10px rgba(34, 197, 94, 0.4);
+      }
+      .btn-8020:active {
+        transform: scale(0.98);
+      }
+      .btn-8020::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease;
+        z-index: -1;
+      }
+      .btn-8020:hover::before {
+        width: 300%;
+        height: 300%;
+      }
+      
+      .btn-8020-white:hover {
+        box-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
