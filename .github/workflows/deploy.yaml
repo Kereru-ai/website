@@ -23,5 +23,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: kereru-website
-          directory: dist # Ensure this matches your Vite/Build output
+          directory: dist # Built Vite output directory
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
